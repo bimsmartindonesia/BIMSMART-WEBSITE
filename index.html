@@ -33,19 +33,24 @@
         .section { padding: 60px 0; }
         .section-title { text-align: center; margin-bottom: 35px; }
         .section-title h2 { font-size: 32px; margin-bottom: 10px; color: #1e293b; }
+        .section-title p { font-size: 16px; color: #64748b; margin-bottom: 10px; }
         .line { width: 80px; height: 4px; background: var(--accent); margin: 0 auto; }
-        .bg-light { background: var(--bg); }
 
         /* TABEL */
-        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .table-wrap { overflow-x: auto; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 20px; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); min-width: 500px; }
         th { background: var(--primary); color: white; padding: 15px; text-align: left; }
         td { padding: 14px 15px; border-bottom: 1px solid #eee; }
         .harga { font-weight: bold; color: var(--primary); font-size: 18px; }
+        .ket-note { background: #fef3c7; padding: 15px; border-radius: 8px; text-align: center; font-size: 14px; }
 
         /* LOKASI */
-        .lokasi-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .lokasi-item { background: white; padding: 25px; border-radius: 10px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .lokasi-item h3 { color: var(--primary); margin-bottom: 10px; }
+        .bg-light { background: var(--bg); }
+        .lokasi-box { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); max-width: 600px; margin: 0 auto; }
+        .lokasi-box h3 { color: var(--primary); margin-bottom: 15px; font-size: 24px; }
+        .lokasi-box p { font-size: 18px; margin-bottom: 20px; line-height: 1.8; }
+        .btn-maps { display: inline-block; background: #25D366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; }
+        .btn-maps:hover { background: #1ebc57; }
 
         /* PRESTASI */
         .prestasi { background: linear-gradient(135deg, var(--dark), var(--primary)); color: white; padding: 40px; border-radius: 15px; text-align: center; }
@@ -55,7 +60,7 @@
 
         /* FOOTER */
         footer { background: #1e293b; color: white; padding: 40px 20px; text-align: center; }
-        .footer-link { color: white; margin: 0 15px; }
+        .footer-link { color: white; margin: 0 15px; text-decoration: underline; }
 
         /* WA FLOAT */
         .wa-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; }
@@ -86,111 +91,160 @@
         </div>
     </section>
 
-    <!-- PROGRAM 60 MENIT -->
+    <!-- PROGRAM REGULER -->
     <section class="section">
         <div class="container">
             <div class="section-title">
-                <h2>📚 Program 60 Menit (Di Bimbel)</h2>
-                <p>Senin - Jum'at | SPP per Bulan</p>
+                <h2>📚 Program Reguler (3x Les/Minggu)</h2>
+                <p>Hari disesuaikan dengan kesepakatan Wali & Miss Fira | SPP per Bulan</p>
                 <div class="line"></div>
             </div>
-            <table>
-                <tr>
-                    <th>Jenis Program</th>
-                    <th>Jenjang</th>
-                    <th>Harga</th>
-                </tr>
-                <tr>
-                    <td><strong>Reguler</strong><br><small>10-15 siswa/kelas</small></td>
-                    <td>Pra School - SMA</td>
-                    <td class="harga">Rp 75.000</td>
-                </tr>
-                <tr>
-                    <td><strong>Semi Private</strong><br><small>1 guru 5 siswa</small></td>
-                    <td>Pra School - SD</td>
-                    <td class="harga">Rp 100.000</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>SMP - SMA</td>
-                    <td class="harga">Rp 150.000</td>
-                </tr>
-                <tr>
-                    <td><strong>Private</strong><br><small>1 guru 1 siswa</small></td>
-                    <td>Pra School - SD</td>
-                    <td class="harga">Rp 300.000</td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td>SMP - SMA</td>
-                    <td class="harga">Rp 350.000</td>
-                </tr>
-            </table>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Jenis Program</th>
+                        <th>Jenjang</th>
+                        <th>Harga</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Class Room</strong><br><small>10-15 siswa/kelas</small></td>
+                        <td>Pra School - SMA</td>
+                        <td class="harga">Rp 45.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semi Private</strong><br><small>1 guru 5 siswa</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 60.000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>SMP - SMA</td>
+                        <td class="harga">Rp 90.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Private</strong><br><small>1 guru 1 siswa</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 180.000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>SMP - SMA</td>
+                        <td class="harga">Rp 210.000</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </section>
 
-    <!-- PROGRAM 90 MENIT -->
+    <!-- PROGRAM INTENSIF -->
     <section class="section bg-light">
         <div class="container">
             <div class="section-title">
-                <h2>🏠 Program 90 Menit (Tutor ke Rumah)</h2>
-                <p>Bayar per sesi | Jam 10.00 - 20.00</p>
+                <h2>⚡ Program Intensif (Senin - Jum'at)</h2>
+                <p>SPP per Bulan</p>
                 <div class="line"></div>
             </div>
-            <table>
-                <tr>
-                    <th>Jenjang</th>
-                    <th>Fee/Sesi</th>
-                </tr>
-                <tr>
-                    <td>Pra School - TK - Kelas 1 SD</td>
-                    <td class="harga">Rp 35.000</td>
-                </tr>
-                <tr>
-                    <td>SD</td>
-                    <td class="harga">Rp 40.000</td>
-                </tr>
-                <tr>
-                    <td>SMP</td>
-                    <td class="harga">Rp 50.000</td>
-                </tr>
-                <tr>
-                    <td>SMA</td>
-                    <td class="harga">Rp 60.000</td>
-                </tr>
-            </table>
-            <p style="background: #fef3c7; padding: 15px; border-radius: 8px; text-align: center;">
-                <strong>+Rp 10.000</strong> jika tambah siswa
-            </p>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Jenis Program</th>
+                        <th>Jenjang</th>
+                        <th>Harga</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Class Room</strong><br><small>10-15 siswa/kelas</small></td>
+                        <td>Pra School - SMA</td>
+                        <td class="harga">Rp 75.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semi Private</strong><br><small>1 guru 5 siswa</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 100.000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>SMP - SMA</td>
+                        <td class="harga">Rp 150.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Private</strong><br><small>1 guru 1 siswa</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 300.000</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>SMP - SMA</td>
+                        <td class="harga">Rp 350.000</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- TENTOR KE RUMAH -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>🏠 Program Tutor ke Rumah Siswa</h2>
+                <p>Bayar per sesi | 90 Menit Pembelajaran</p>
+                <div class="line"></div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <tr>
+                        <th>Jenis Program</th>
+                        <th>Jenjang</th>
+                        <th>Fee/Sesi</th>
+                    </tr>
+                    <tr>
+                        <td rowspan="3"><strong>Private</strong><br><small>1 guru 1 siswa</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 35.000</td>
+                    </tr>
+                    <tr>
+                        <td>SMP</td>
+                        <td class="harga">Rp 50.000</td>
+                    </tr>
+                    <tr>
+                        <td>SMA</td>
+                        <td class="harga">Rp 60.000</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><strong>Semi Private</strong><br><small>Lebih dari 1 anak</small></td>
+                        <td>Pra School - SD</td>
+                        <td class="harga">Rp 15.000/anak</td>
+                    </tr>
+                    <tr>
+                        <td>SMP - SMA</td>
+                        <td class="harga">Rp 25.000/anak</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </section>
 
     <!-- LOKASI -->
-    <section class="section">
+    <section class="section bg-light">
         <div class="container">
             <div class="section-title">
                 <h2>📍 Lokasi Bimbel</h2>
                 <div class="line"></div>
             </div>
             <div class="lokasi-box">
-                <div class="lokasi-item">
-                    <h3>📌 Lokasi 1</h3>
-                    <p>Perum. Puri Antirogo 3 Blok G</p>
-                </div>
-                <div class="lokasi-item">
-                    <h3>📌 Lokasi 2</h3>
-                    <p>Perum. Mahkota Raya Rengganis A6-15</p>
-                </div>
-                <div class="lokasi-item">
-                    <h3>📌 Lokasi 3</h3>
-                    <p>Dukuh Rambipuji Gang Masjid Baitul Huda</p>
-                </div>
+                <h3>📍 Lokasi BIMSMART</h3>
+                <p>
+                    Dukuhsia, Rambipuji, Jember<br>
+                    Masuk gang sebrang Masjid Baitul Huda
+                </p>
+                <a href="https://share.google/kN3NAdYWnCTgSmd21" target="_blank" class="btn-maps">
+                    📍 Buka di Google Maps
+                </a>
             </div>
         </div>
     </section>
 
     <!-- PRESTASI -->
-    <section class="section bg-light">
+    <section class="section">
         <div class="container">
             <div class="section-title">
                 <h2>🏆 Prestasi Siswa</h2>
@@ -216,12 +270,12 @@
     <footer>
         <div class="container">
             <h2>BIMSMART Indonesia</h2>
-            <p>Hubungi: Miis Fira - 085704127484</p>
+            <p>Hubungi: Miss Fira - 085704127484</p>
             <p style="margin: 20px 0;">
                 <a href="https://s.id/formpendaftaranBIMSMART02" class="footer-link">📝 Pendaftaran</a> | 
                 <a href="https://s.id/Formpembayaran" class="footer-link">💳 Pembayaran</a>
             </p>
-            <p style="opacity: 0.6; font-size: 14px;">© 2024 BIMSMART Indonesia</p>
+            <p style="opacity: 0.6; font-size: 14px;">© 2026 BIMSMART Indonesia</p>
         </div>
     </footer>
 
